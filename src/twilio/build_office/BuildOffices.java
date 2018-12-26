@@ -2,16 +2,16 @@ package twilio.build_office;
 
 public class BuildOffices {
     public static void main(String [] args) {
-        int row=3;
-        int col=3;
-        int [][] grid = new int[row][col];
-        for(int i=0;i<row;i++){
-            for(int j=0;j<col;j++){
+        System.out.println(buildOffices(3,3,1));
+    }
+    public static int buildOffices(int w, int h, int n){
+        int [][] grid = new int[h][w];
+        for(int i=0;i<h;i++){
+            for(int j=0;j<w;j++){
                 grid[i][j] = -1;
             }
         }
-        int min = placeOffices(grid, 1, Integer.MAX_VALUE);
-        System.out.println(min);
+        return placeOffices(grid, n, Integer.MAX_VALUE);
     }
     public static int placeOffices(int [][] grid, int n, int min){
         if(n==0){
