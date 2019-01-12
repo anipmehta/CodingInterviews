@@ -43,7 +43,10 @@ public class BuildOffices {
     }
 
     public static int minDistanceFromZero(int startRow, int startCol, int minDistance, int currRow, int currCol, int [][] grid, boolean[][] visited){
-        if(isNotValid(currRow, currCol, grid) || visited[currRow][currCol]){
+        if(isNotValid(currRow, currCol, grid)){
+            return minDistance;
+        }
+        if(visited[currRow][currCol]){
             return minDistance;
         }
         if(Math.abs(startRow-currRow) + Math.abs(startCol-currCol)>minDistance){

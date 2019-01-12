@@ -12,7 +12,6 @@ public class Twilio {
         for (int num : maxes){
             System.out.println(countSmall(nums, num));
         }
-
         return nums;
     }
 
@@ -20,7 +19,7 @@ public class Twilio {
         int low = 0;
         int high = arr.length-1;
         int mid = 0;
-        while(low<high){
+        while(low<=high){
             mid = low + (high - low) / 2;
             if(arr[mid]==num){
                 return mid+1;
