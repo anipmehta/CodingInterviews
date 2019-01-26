@@ -4,9 +4,9 @@ public class GoogleQ6 {
     public static void main(String [] args){
         GoogleQ6 googleQ6 = new GoogleQ6();
         int [] stores = {1, 5, 20, 11, 16};
-        int [] houses = {5, 10, 18};
+        int [] houses = {5, 10, 50};
         int [] out = googleQ6.solution(stores, houses);
-        System.out.println(out);
+        System.out.print(Arrays.toString(out));
     }
     public int [] solution(int[] stores, int[] houses){
         Arrays.sort(stores);
