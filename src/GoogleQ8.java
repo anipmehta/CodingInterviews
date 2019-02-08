@@ -1,0 +1,2 @@
+public class GoogleQ8 {
+}

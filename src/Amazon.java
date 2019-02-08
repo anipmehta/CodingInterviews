@@ -5,20 +5,6 @@ public class Amazon {
     public static void main(String[] args){
         Amazon amazon = new Amazon();
         List<List<Integer>> list = new ArrayList<>();
-//        list1.add(1);
-//        list1.add(0);
-//        list1.add(0);
-//        list.add(list1);
-//        list1 = new ArrayList<>();
-//        list1.add(1);
-//        list1.add(0);
-//        list1.add(0);
-//        list.add(list1);
-//        list1 = new ArrayList<>();
-//        list1.add(1);
-//        list1.add(9);
-//        list1.add(1);
-//        list.add(list1);
         int [] row1 = {1,1,1,1};
         int [] row2 = {0,1,1,1};
         int [] row3 = {0,1,0,1};
@@ -29,8 +15,8 @@ public class Amazon {
         list.add(Arrays.stream(row3).boxed().collect(Collectors.toList()));
         list.add(Arrays.stream(row4).boxed().collect(Collectors.toList()));
         list.add(Arrays.stream(row5).boxed().collect(Collectors.toList()));
-        int distnace = amazon.removeObstacle(5, 4, list);
-        System.out.println(distnace);
+        int distance = amazon.removeObstacle(5, 4, list);
+        System.out.println(distance);
     }
     int removeObstacle(int numRows, int numColumns, List<List<Integer>> lot){
         Queue<Coordinate> queue = new LinkedList<>();
