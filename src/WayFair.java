@@ -9,18 +9,12 @@ public class WayFair {
         int bestSoFar = Integer.MIN_VALUE;
         int indexOfBestSoFar = 0;
         for(int i=0; i<A.length; i++){
-            if(A[i]>bestSoFar){
-                if(i==-1){
+            if(A[i] > bestSoFar + i - indexOfBestSoFar){
                     bestSoFar = A[i];
                     indexOfBestSoFar = i;
-                }
-                else if(A[i] > bestSoFar + i - indexOfBestSoFar){
-                    bestSoFar = A[i];
-                    indexOfBestSoFar = i;
-                }
             }
-                max = Math.max(max, 2*A[i]);
-                max = Math.max(max, A[i] + bestSoFar + i - indexOfBestSoFar);
+             max = Math.max(max, 2*A[i]);
+            max = Math.max(max, A[i] + bestSoFar + i - indexOfBestSoFar);
         }
         return max;
     }

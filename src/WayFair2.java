@@ -3,25 +3,25 @@ public class WayFair2 {
         WayFair2 wayFair2 = new WayFair2();
         System.out.println(wayFair2.solution("011100"));
     }
-    public int solution(String s) {
+    public int solution(String S) {
        int index = 0;
        int count = 0;
-       while(s.charAt(index)=='0'){
+       while(S.charAt(index)=='0'){
            index++;
        }
-       s = s.substring(index);
+       S = S.substring(index);
 
-       while (s.length()>1){
-           index = s.length()-1;
-           if(s.charAt(index)=='0'){
-               s = s.substring(0,index);
+       while (S.length()>1){
+           index = S.length()-1;
+           if(S.charAt(index)=='0'){
+               S = S.substring(0,index);
            }
            else {
-               s = s.substring(0,index) + '0';
+               S = S.substring(0,index) + '0';
            }
            count++;
        }
-       if(s.charAt(0)=='1'){
+       if(S.charAt(0)=='1'){
            count++;
        }
        return count;
